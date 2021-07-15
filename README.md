@@ -52,6 +52,7 @@ Create your application
 `$ docker-compose run --no-deps web rails new . --force --database=postgresql`  
 
 Then adjust the database.yml file similar to what is included in the compose3 project in GH or in the Docker-Compose-F in local machine only the following
+
 ````
 default: &default
   adapter: postgresql
@@ -63,11 +64,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   variables:
      statement_timeout: 5000
-
-
 ```
 
-Now, check you’re ready to launch our app  
+Now, check you’re ready to launch our app    
 `$ docker-compose up`  
 
 Installing the newest version of Postgres Gem
@@ -87,8 +86,8 @@ Every time you stop/finish working in a project remember to run ***
 
 ##Creating the DB##
 
-When you create the first model, you will need to run this 
-`$ docker-compose run web rake db:create`    
+When you create the first model, you will need to run this   
+`$ docker-compose run web rake db:create`
 OR  
 `$ docker-compose exec web bin/rails db:create db:migrate`  
 

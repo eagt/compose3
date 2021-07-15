@@ -53,7 +53,7 @@ Create your application
 
 Then adjust the database.yml file similar to what is included in the compose3 project in GH or in the Docker-Compose-F in local machine only the following
 
-````
+```
 default: &default
   adapter: postgresql
   encoding: unicode

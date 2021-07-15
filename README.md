@@ -8,16 +8,16 @@ Open it on your text editor, in my case
 
 Create a Dockerfile in the root of your project
 $ touch Dockerfile
-Add all what is included in the compose3 project in GH or in the Docker-Compose-F in local machine. 
+Add all what is included in the compose3 project in GH or in the compose3 in local machine. 
 Note: Remember to change the project_name
 
 Then Create a docker-compose.yml file in the root of your project
 `$ touch docker-compose.yml`
-Add all what is included in the compose3 project in GH or in the Docker-Compose-F in local machine. Note: Remember to change the project_name
+Add all what is included in the compose3 project in GH or in the compose3 in local machine. Note: Remember to change the project_name
 
 Then Create a entrypoint.sh file in the root of your project
 `$ touch entrypoint.sh`
-Add all what is included in the compose3 project in GH or in the Docker-Compose-F in local machine
+Add all what is included in the compose3 project in GH or in the compose3 in local machine
 
 Create some directories to store our environment-specific config:
 `$ mkdir -p .env/development && cd .env/development`
@@ -28,7 +28,7 @@ Then create the file inside the .env/development called web (without a file exte
 Create another file, .env/development/database, containing those for our database service:
 `$ touch db`
 
-Add all what is included in the compose3 project in GH or in the Docker-Compose-F in local machine.  
+Add all what is included in the compose3 project in GH or in the compose3 in local machine.  
 <b>Note:</b> Remember to change the name of the application for the POSTGRES_DB or any other if variable.
 
 Create a Gemfile and a Gemfile.lock file at the root of the project  
@@ -51,7 +51,7 @@ Run
 Create your application  
 `$ docker-compose run --no-deps web rails new . --force --database=postgresql`  
 
-Then adjust the database.yml file similar to what is included in the compose3 project in GH or in the Docker-Compose-F in local machine only the following
+Then adjust the database.yml file similar to what is included in the compose3 project in GH or in the compose3 in local machine only the following
 
 ```
 default: &default

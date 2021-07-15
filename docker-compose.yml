@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    env_file:
+      - .env/development/db
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/compose3
+      - bundler_gems:/usr/local/bundle/
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    env_file:
+      - .env/development/db
+      - .env/development/web
+volumes:
+  postgres:
+  bundler_gems:
+

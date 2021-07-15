@@ -83,7 +83,7 @@ Now, check you’re ready to launch our app
 `$ docker-compose up`  
 
 Installing the newest version of Postgres Gem
-Go to Ruby gems and get the pg version you would like to use and change it from the one already there on your Gemfile.   <?php
+Go to Ruby gems and get the pg version you would like to use and change it from the one already there on your Gemfile.  
 
 `$ docker-compose stop`  
 `$ docker-compose up -d web`  
@@ -93,7 +93,7 @@ Go to Ruby gems and get the pg version you would like to use and change it from 
 Check on your browser <b>localhost:3000</b>. You should see the Rails message!!
 
 					***Remember***  
-Every time you stop/finish working in a project remember to run ***
+Every time you stop/finish working in a project remember to run
 `$ docker-compose down`
 
 

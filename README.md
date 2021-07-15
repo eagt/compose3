@@ -9,11 +9,11 @@ Open it on your text editor, in my case
 Create a Dockerfile in the root of your project
 $ touch Dockerfile
 Add all what is included in the <b>compose3</b> project in GH or in the <b>compose3</b> in local machine. 
-*** Note: *** Remember to change the * project_name *
+***Note:*** Remember to change the * project_name *
 
 Then Create a <b>docker-compose.yml</b> file in the root of your project
 `$ touch docker-compose.yml`
-Add all what is included in the <b>compose3</b>  project in GH or in the <b>compose3</b>  in local machine. *** Note: *** Remember to change the * project_name *
+Add all what is included in the <b>compose3</b>  project in GH or in the <b>compose3</b>  in local machine. <b>Note:</b>Remember to change the * project_name *
 
 Then Create a <b>entrypoint.sh</b> file in the root of your project
 `$ touch entrypoint.sh`
@@ -43,7 +43,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 6.1.4 '
 
 ```
-*** Note: *** You can add the version you need. Leave the Gemfile.lock file empty.  
+<b>Note:</b> You can add the version you need. Leave the Gemfile.lock file empty.  
 
 Run  
 `$ docker-compose build`  
@@ -102,7 +102,7 @@ Check on your browser <b>localhost:3000</b>. You should see the Rails message!! 
 Add bootstrap and dependencies using yarn  
 
 `$ docker-compose run web yarn add bootstrap@next jquery @popperjs/core`  
-***Note:*** Jquery is no longer required by Bootstrap5 but I know I’ll need it later so I have added it.
+<b>Note:</b> Jquery is no longer required by Bootstrap5 but I know I’ll need it later so I have added it.
 
 Add the stylesheet_pack_tag to the application.html.erb file. So, go and update the application layout app/views/layouts/application.html.erb.
 

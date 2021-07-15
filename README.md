@@ -84,7 +84,7 @@ Every time you stop/finish working in a project remember to run ***
 `$ docker-compose down`
 
 
-##Creating the DB##
+## Creating the DB ##
 
 When you create the first model, you will need to run this   
 `$ docker-compose run web rake db:create`
@@ -97,7 +97,7 @@ Now, check you’re ready to launch our app
 Check on your browser localhost:3000. You should see the Rails message!! or if you created a model and you go to the index.html for the model you should be able to see it. 
 
 
-##Bootstrap5##
+## Bootstrap5 ##
 
 Add bootstrap and dependencies using yarn  
 
@@ -183,7 +183,7 @@ Every time you stop working in a project remember to run
 `$ docker-compose down`
 
 
-## WORKING WITH GITHUB ##<?php
+## WORKING WITH GITHUB ##
 
 The process to work with git and GitHub still the same. You will commit and push to your repo in GitHub in the same way. If you cloned a repository (docker project in this case) that is on your machine already what you need to do to have it run it as expected is:
 

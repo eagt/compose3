@@ -9,29 +9,42 @@ Open it on your text editor, in my case
 Create a Dockerfile in the root of your project
 $ touch Dockerfile
 Add all what is included in the <b>compose3</b> project in GH or in the <b>compose3</b> in local machine. 
-***Note:*** Remember to change the * project_name *
+***Note:*** Remember to change the *project_name*
 
 Then Create a <b>docker-compose.yml</b> file in the root of your project
 `$ touch docker-compose.yml`
-Add all what is included in the <b>compose3</b>  project in GH or in the <b>compose3</b>  in local machine. <b>Note:</b>Remember to change the * project_name *
+Add all what is included in the <b>compose3</b>  project in GH or in the <b>compose3</b>  in local machine. ***Note:***  Remember to change the *project_name*
 
-Then Create a <b>entrypoint.sh</b> file in the root of your project
-`$ touch entrypoint.sh`
-Add all what is included in the <b>compose3</b>  project in GH or in the <b>compose3</b>  in local machine
+Then Create a <b>entrypoint.sh</b> file in the root of your project    
+`$ touch entrypoint.sh`. 
 
-Create some directories to store our environment-specific config:
+```
+#!/bin/bash
+set -e
+
+# Remove a potentially pre-existing server.pid for Rails.
+rm -f /myapp/tmp/pids/server.pid
+
+# Then exec the container's main process (what's set as CMD in the Dockerfile).
+exec "$@"
+
+```
+
+Create some directories to store our environment-specific config: 
+
 `$ mkdir -p .env/development && cd .env/development`
 
-Then create the file inside the <b>.env/development</b> called *** web *** (without a file extension), which contains our web-service-specific environment variables:
+Then create the file inside the <b>.env/development</b> called ***web*** (without a file extension), which contains our web-service-specific environment variables:  
+
 `$ touch web`
 
-Create another file inside the, <b>.env/development</b> called *** db *** (for the database variables), containing those for our database service:
+Create another file inside the, <b>.env/development</b> called ***db*** (for the database variables), containing those for our database service:  
 `$ touch db`
 
 Add all what is included in the <b>compose3</b> project in GH or in the <b>compose3</b>  in local machine.  
-<b>Note:</b> Remember to change the name of the application for the POSTGRES_DB or any other if variable.
+***Note:*** Remember to change the name of the application for the POSTGRES_DB or any other if variable.
 
-Create a Gemfile and a Gemfile.lock file at the root of the project  
+Create a Gemfile and a Gemfile.lock file at the root of the project    
 
 `$ touch Gemfile.lock`  
 `$ touch Gemfile`  
@@ -43,7 +56,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 6.1.4 '
 
 ```
-<b>Note:</b> You can add the version you need. Leave the Gemfile.lock file empty.  
+***Note:***  You can add the version you need. Leave the Gemfile.lock file empty.  
 
 Run  
 `$ docker-compose build`  
@@ -102,7 +115,7 @@ Check on your browser <b>localhost:3000</b>. You should see the Rails message!! 
 Add bootstrap and dependencies using yarn  
 
 `$ docker-compose run web yarn add bootstrap@next jquery @popperjs/core`  
-<b>Note:</b> Jquery is no longer required by Bootstrap5 but I know I’ll need it later so I have added it.
+***Note:*** Jquery is no longer required by Bootstrap5 but I know I’ll need it later so I have added it.
 
 Add the stylesheet_pack_tag to the application.html.erb file. So, go and update the application layout app/views/layouts/application.html.erb.
 

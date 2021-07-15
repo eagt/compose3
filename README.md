@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 });
-
 ```  
 
 Make sure your config/webpack/environment.js looks like below
@@ -153,7 +152,7 @@ environment.plugins.prepend('Provide',
 
 module.exports = environment
 
-```<?php
+```
 
 Bootstrap should be working now.
 

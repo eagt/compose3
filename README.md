@@ -8,27 +8,27 @@ Open it on your text editor, in my case
 
 Create a Dockerfile in the root of your project
 $ touch Dockerfile
-Add all what is included in the compose3 project in GH or in the compose3 in local machine. 
-Note: Remember to change the project_name
+Add all what is included in the <b>compose3</b> project in GH or in the <b>compose3</b> in local machine. 
+*** Note: *** Remember to change the * project_name *
 
-Then Create a docker-compose.yml file in the root of your project
+Then Create a <b>docker-compose.yml</b> file in the root of your project
 `$ touch docker-compose.yml`
-Add all what is included in the compose3 project in GH or in the compose3 in local machine. Note: Remember to change the project_name
+Add all what is included in the <b>compose3</b>  project in GH or in the <b>compose3</b>  in local machine. *** Note: *** Remember to change the * project_name *
 
-Then Create a entrypoint.sh file in the root of your project
+Then Create a <b>entrypoint.sh</b> file in the root of your project
 `$ touch entrypoint.sh`
-Add all what is included in the compose3 project in GH or in the compose3 in local machine
+Add all what is included in the <b>compose3</b>  project in GH or in the <b>compose3</b>  in local machine
 
 Create some directories to store our environment-specific config:
 `$ mkdir -p .env/development && cd .env/development`
 
-Then create the file inside the .env/development called web (without a file extension), which contains our web-service-specific environment variables:
+Then create the file inside the <b>.env/development</b> called *** web *** (without a file extension), which contains our web-service-specific environment variables:
 `$ touch web`
 
-Create another file, .env/development/database, containing those for our database service:
+Create another file inside the, <b>.env/development</b> called *** db *** (for the database variables), containing those for our database service:
 `$ touch db`
 
-Add all what is included in the compose3 project in GH or in the compose3 in local machine.  
+Add all what is included in the <b>compose3</b> project in GH or in the <b>compose3</b>  in local machine.  
 <b>Note:</b> Remember to change the name of the application for the POSTGRES_DB or any other if variable.
 
 Create a Gemfile and a Gemfile.lock file at the root of the project  
@@ -43,7 +43,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 6.1.4 '
 
 ```
-***Note:*** You can add the version you need. Leave the Gemfile.lock file empty.  
+*** Note: *** You can add the version you need. Leave the Gemfile.lock file empty.  
 
 Run  
 `$ docker-compose build`  
@@ -51,7 +51,7 @@ Run
 Create your application  
 `$ docker-compose run --no-deps web rails new . --force --database=postgresql`  
 
-Then adjust the database.yml file similar to what is included in the compose3 project in GH or in the compose3 in local machine only the following
+Then adjust the database.yml file similar to what is included in the <b>compose3</b> project in GH or in the <b>compose3</b>  in local machine only the following
 
 ```
 default: &default
@@ -77,7 +77,7 @@ Go to Ruby gems and get the pg version you would like to use and change it from 
 `$ docker-compose exec web bundle OR $ docker-compose exec web bundle`  
 `$ docker-compose up`  
 	
-Check on your browser localhost:3000. You should see the Rails message!!
+Check on your browser <b>localhost:3000</b>. You should see the Rails message!!
 
 					***Remember***  
 Every time you stop/finish working in a project remember to run ***
@@ -94,7 +94,7 @@ OR
 Now, check you’re ready to launch our app  
 `$ docker-compose up`
 
-Check on your browser localhost:3000. You should see the Rails message!! or if you created a model and you go to the index.html for the model you should be able to see it. 
+Check on your browser <b>localhost:3000</b>. You should see the Rails message!! or if you created a model and you go to the index.html for the model you should be able to see it. 
 
 
 ## Bootstrap5 ##
@@ -108,11 +108,11 @@ Add the stylesheet_pack_tag to the application.html.erb file. So, go and update 
 
 Create a new directory inside at app/javascript called stylesheets. 
 We will then put our stylesheets in here and they will be managed by webpack. 
-Create new file inside the app/javascript/stylesheets called application.scss. Inside the file add the following line
+Create new file inside the <b>app/javascript/stylesheets</b> called <b>application.scss</b>. Inside the file add the following line
 
 `@import "~bootstrap/scss/bootstrap";`
 
-Now, in file app/javascript/packs/application.js, at the bottom of the file, add the following code which will also deal with popovers and tooltips. Add also the require("jquery") as we’ll need it for the ajax calls later
+Now, in file <b>app/javascript/packs/application.js</b>, at the bottom of the file, add the following code which will also deal with popovers and tooltips. Add also the require("jquery") as we’ll need it for the ajax calls later in some projects
 
 ```
 
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 ```  
 
-Make sure your config/webpack/environment.js looks like below
+Make sure your <b>config/webpack/environment.js</b> looks like below
 
 ``` 
 const { environment } = require('@rails/webpacker')

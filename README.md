@@ -82,8 +82,13 @@ default: &default
 Now, check you’re ready to launch our app    
 `$ docker-compose up`  
 
-Installing the newest version of Postgres Gem
+Check on your browser <b>localhost:3000</b>. You should see the Rails message!!
+
+
+### Installing the newest version of Postgres Gem ###
 Go to Ruby gems and get the pg version you would like to use and change it from the one already there on your Gemfile.  
+
+Run  
 
 `$ docker-compose stop`  
 `$ docker-compose up -d web`  
@@ -117,9 +122,9 @@ Add bootstrap and dependencies using yarn
 `$ docker-compose run web yarn add bootstrap@next jquery @popperjs/core`  
 ***Note:*** Jquery is no longer required by Bootstrap5 but I know I’ll need it later so I have added it.
 
-Add the stylesheet_pack_tag to the application.html.erb file. So, go and update the application layout app/views/layouts/application.html.erb.
+Change to the ***stylesheet_pack_tag*** to the application.html.erb file. So, go and update the application layout <b>app/views/layouts/application.html.erb.</b>
 
-Create a new directory inside at app/javascript called stylesheets. 
+Create a new directory inside at app/javascript called stylesheets.  
 We will then put our stylesheets in here and they will be managed by webpack. 
 Create new file inside the <b>app/javascript/stylesheets</b> called <b>application.scss</b>. Inside the file add the following line
 
